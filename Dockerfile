@@ -1,7 +1,10 @@
-# FROM ham5312/covidarticle:1.0
-FROM ham5312/popsong:1.0
+FROM python:3.7
 
 WORKDIR /app
+
 COPY . .
-RUN pip install torch==1.7.1+cu101 torchvision==0.8.2+cu101 torchaudio==0.7.2 -f https://download.pytorch.org/whl/torch_stable.html
-CMD python3 server.py
+RUN pip install -r requirements.txt
+
+EXPOSE 80
+
+CMD ["python3", "server.py"]

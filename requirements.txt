@@ -1,5 +1,3 @@
-transformers
-tensorboard
-wandb
 flask
-waitress
+requests
+
